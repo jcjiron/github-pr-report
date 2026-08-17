@@ -1,0 +1,38 @@
+[
+  {
+    "number": 101,
+    "title": "Add retry logic to the sync worker",
+    "user": { "login": "alice" },
+    "created_at": "2024-01-05T09:00:00Z",
+    "html_url": "https://github.com/acme/widgets/pull/101",
+    "requested_reviewers": [{ "login": "bob" }, { "login": "carol" }],
+    "milestone": { "title": "v2.0" }
+  },
+  {
+    "number": 103,
+    "title": "Update deployment docs",
+    "user": { "login": "erin" },
+    "created_at": "2024-01-08T09:00:00Z",
+    "html_url": "https://github.com/acme/widgets/pull/103",
+    "requested_reviewers": [],
+    "milestone": { "title": "v2.1" }
+  },
+  {
+    "number": 102,
+    "title": "Fix flaky integration test",
+    "user": { "login": "dave" },
+    "created_at": "2024-01-10T09:00:00Z",
+    "html_url": "https://github.com/acme/widgets/pull/102",
+    "requested_reviewers": [],
+    "milestone": null
+  },
+  {
+    "number": 104,
+    "title": "Refactor auth middleware",
+    "user": { "login": "grace" },
+    "created_at": "2024-01-12T09:00:00Z",
+    "html_url": "https://github.com/acme/widgets/pull/104",
+    "requested_reviewers": [{ "login": "heidi" }, { "login": "ivan" }],
+    "milestone": null
+  }
+]

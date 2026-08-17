@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-pr-report"
+version = "0.1.0"
+description = "CLI que convierte los pull requests abiertos de GitHub en un reporte operativo por repositorio."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+github-pr-report = "github_pr_report.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["github_pr_report*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

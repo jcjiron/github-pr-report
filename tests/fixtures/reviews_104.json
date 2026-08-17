@@ -1,0 +1,4 @@
+[
+  { "user": { "login": "heidi" }, "state": "APPROVED" },
+  { "user": { "login": "ivan" }, "state": "CHANGES_REQUESTED" }
+]
