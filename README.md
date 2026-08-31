@@ -105,6 +105,35 @@ tocar `logic`, `service`, `transform` ni `client`.
    `requests`.
 5. **Orden de filas**: de más antigua a más reciente.
 
+## Solución de problemas
+
+### macOS: `SSL: CERTIFICATE_VERIFY_FAILED`
+
+Si al ejecutar el script obtienes un error como:
+
+```text
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify
+failed: unable to get local issuer certificate (_ssl.c:1002)
+```
+
+es porque instalaste Python desde [python.org](https://www.python.org/) en
+macOS. Ese instalador trae su propio bundle de certificados y no usa el
+keychain del sistema, así que si no corriste el paso final del instalador,
+`urllib` (usado por este proyecto para no depender de `requests`) no puede
+verificar el certificado TLS de `api.github.com`.
+
+Para arreglarlo, corre el script `Install Certificates.command` que viene
+con esa instalación de Python (ajusta la versión si no es 3.11):
+
+```bash
+open "/Applications/Python 3.11/Install Certificates.command"
+```
+
+Vuelve a correr el comando después de que termine.
+
+Alternativa: instala Python con Homebrew (`brew install python3`), que usa
+los certificados del sistema y no tiene este problema.
+
 ## Fuera de alcance (backlog)
 
 - Stacked PRs (formal e inferencia por ramas `head == base`).
