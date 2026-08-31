@@ -17,20 +17,20 @@ entrega" que identifica dónde se detuvo cada PR y cuál es la siguiente acción
 ## Instalación
 
 ```bash
-pip install -e ".[dev]"
+python3 -m pip install -e ".[dev]"
 ```
 
 ## Uso
 
 ```bash
 export GITHUB_TOKEN="github_pat_..."
-python github_pr_report.py --repo https://github.com/org/repo-a
+python3 github_pr_report.py --repo https://github.com/org/repo-a
 ```
 
 Varios repositorios en un mismo reporte, repitiendo `--repo`:
 
 ```bash
-python github_pr_report.py --repo org/repo-a --repo org/repo-b
+python3 github_pr_report.py --repo org/repo-a --repo org/repo-b
 ```
 
 `--repo` acepta URLs HTTPS (`https://github.com/owner/repo`), SSH
@@ -48,7 +48,7 @@ la terminal.** Esto permite reutilizar todo salvo `cli.py` y
 
 ```text
 github-pr-report/
-├── github_pr_report.py            # Launcher: python github_pr_report.py --repo URL
+├── github_pr_report.py            # Launcher: python3 github_pr_report.py --repo URL
 ├── github_pr_report/
 │   ├── __init__.py
 │   ├── urls.py                    # Parseo/validación de URLs; owner/repo local
@@ -115,7 +115,7 @@ tocar `logic`, `service`, `transform` ni `client`.
 ## Pruebas
 
 ```bash
-python -m pytest
+python3 -m pytest
 ```
 
 Las pruebas usan mocks y fixtures JSON. No hacen llamadas de red, no
